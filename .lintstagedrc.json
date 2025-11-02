@@ -1,0 +1,4 @@
+{
+  "**/*.+(js|yml|json|ts|tsx|jsx|md)": ["prettier --write"],
+  "**/*.+(js|ts|tsx)": ["eslint --fix", "npm run test:staged"]
+}

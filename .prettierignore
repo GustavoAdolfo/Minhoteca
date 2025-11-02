@@ -1,0 +1,8 @@
+# Ignore artifacts:
+build/**
+dist/**
+coverage
+jest.config.ts
+tsconfig.json
+**/*.txt
+**/setup-tests.ts
