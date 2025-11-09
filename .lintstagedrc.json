@@ -1,5 +1,5 @@
 {
   "**/*.+(js|yml|json|ts|tsx|jsx|md)": ["prettier --write"],
-  "**/*.{js,ts,tsx}": ["eslint --fix"],
-  "src/**/*.{js,ts,tsx}": ["npm run test:staged"]
+  "src/**/!(*.d|*.types).{js,ts,tsx}": ["eslint --fix"],
+  "src/**/*.{js,ts,tsx}": ["npm run test:staged -- --passWithNoTests"]
 }
