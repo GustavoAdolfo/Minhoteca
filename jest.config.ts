@@ -35,7 +35,7 @@ const config: Config = {
   coverageProvider: 'v8',
 
   // A list of reporter names that Jest uses when writing coverage reports
-  coverageReporters: ['json', 'html'],
+  coverageReporters: ['json', 'lcov', 'text', 'clover', 'html'],
 
   // An object that configures minimum threshold enforcement for coverage results
   coverageThreshold: {
@@ -103,7 +103,16 @@ const config: Config = {
   // projects: undefined,
 
   // Use this configuration option to add custom reporters to Jest
-  reporters: ['default'],
+  reporters: [
+    'default',
+    [
+      'jest-sonar-reporter',
+      {
+        reportFile: 'test-resport.xml',
+        outputDirectory: '.'
+      }
+    ]
+  ],
 
   // Automatically reset mock state before every test
   // resetMocks: false,
