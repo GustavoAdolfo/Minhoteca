@@ -106,7 +106,7 @@ const config: Config = {
   reporters: [
     'default',
     [
-      'jest-sonar-reporter',
+      'jest-junit',
       {
         reportFile: 'test-resport.xml',
         outputDirectory: '.'
