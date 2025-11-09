@@ -1,4 +1,5 @@
 {
   "**/*.+(js|yml|json|ts|tsx|jsx|md)": ["prettier --write"],
-  "**/*.+(js|ts|tsx)": ["eslint --fix", "npm run test:staged"]
+  "**/*.{js,ts,tsx}": ["eslint --fix"],
+  "src/**/*.{js,ts,tsx}": ["npm run test:staged"]
 }

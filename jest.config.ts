@@ -29,7 +29,7 @@ const config: Config = {
   coverageDirectory: 'coverage',
 
   // An array of regexp pattern strings used to skip coverage collection
-  coveragePathIgnorePatterns: ['node_modules', 'jest.config.ts', '<rootDir>/**/types', '<rootDir>/tests/'],
+  coveragePathIgnorePatterns: ['node_modules', 'jest.config.ts', '<rootDir>/**/types', '<rootDir>/tests/', '<rootDir>/**/src/**/DTOs', '<rootDir>/**/src/**/types'],
 
   // Indicates which provider should be used to instrument code for coverage
   coverageProvider: 'v8',
@@ -156,7 +156,13 @@ const config: Config = {
   testMatch: ['**/tests/**/*.spec.ts', '**/__tests__/**/*.spec.ts'],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-  testPathIgnorePatterns: ['node_modules', 'dist'],
+  testPathIgnorePatterns: [
+    'node_modules',
+    'dist',
+    '\\.d\\.ts$', // Ignora arquivos .d.ts
+    '\\.types\\.ts$', // Ignora arquivos .types.ts
+    'jest.config.ts'
+  ],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
   // testRegex: [],

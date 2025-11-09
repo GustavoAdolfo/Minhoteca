@@ -1,0 +1,4 @@
+# Ignorando arquivos de definição de tipos
+**/*.d.ts
+**/*.types.ts
+jest.config.ts
