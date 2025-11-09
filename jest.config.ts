@@ -108,9 +108,9 @@ const config: Config = {
     [
       'jest-junit',
       {
-        reportFile: 'test-resport.xml',
-        outputDirectory: '.',
-        suiteNameTemplate: '{filepath}'
+        outputDirectory: 'coverage',
+        outputName: 'junit.xml',
+        usePathForSuiteName: 'true',
       }
     ]
   ],

@@ -6,16 +6,7 @@ import tseslint from 'typescript-eslint';
 export default tseslint.config(
   // Configurações globais
   {
-    ignores: [
-      'node_modules/',
-      'dist/',
-      'build/',
-      '.next/',
-      'coverage/',
-      '**/*.d.ts',
-      '**/*.types.ts',
-      'jest.config.ts',
-    ],
+    ignores: ['node_modules/', 'dist/', 'build/', 'coverage/', '**/*.d.ts', '**/*.types.ts', 'jest.config.ts'],
   },
 
   // Configuração base do ESLint

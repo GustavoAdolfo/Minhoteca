@@ -13,7 +13,9 @@
     "test:coverage-ant": "NODE_OPTIONS=--experimental-vm-modules jest --coverage",
     "test:ci": "jest --ci --detectOpenHandles --coverage --reporters=jest-junit --reporters=default --passWithNoTests || true",
     "prepare": "husky",
-    "sonar": "npm run test:coverage && sonarqube-scanner"
+    "sonar": "npm run test:coverage && sonarqube-scanner",
+    "lint": "eslint . --ext .ts,.tsx --report-unused-disable-directives --max-warnings 0",
+    "format": "prettier --write ."
   },
   "keywords": [
     "Minhoteca",
