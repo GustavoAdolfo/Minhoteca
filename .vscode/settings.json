@@ -68,5 +68,6 @@
     "**/node_modules": true,
     "**/bower_components": true,
     "package-lock.json": true
-  }
+  },
+  "postman.settings.dotenv-detection-notification-visibility": false
 }
